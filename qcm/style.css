@@ -1,0 +1,21 @@
+.question {
+    background-color: #9EEAE0 ;
+    width: 900px;
+    height: 250px ;
+    border-style: groove;
+    border-width: 4px ;
+    border-color: purple ;
+    margin-top: 10px ;
+     margin-left: 10px ;
+}
+.texte {
+
+    float: left;
+}
+.rep {
+    padding-top: 10px ;
+}
+img {
+    float: right;
+
+}

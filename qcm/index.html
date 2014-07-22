@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>QCM</title>
+        <script text"text/javascript" src="jquery.js"></script>
+        <link rel="stylesheet" href="style.css"
+
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  <a href="">Tester les reponses </a>
+
+
+  <div class="question">
+    <h1>Question 1</h1>
+     <p> Le code JQuery s'éxecute :</p><img id="img1" src="img/question.png" />
+      <form>
+        <input type="radio" id="r1" >Dans le navigateur <br>
+        <input type="radio" id="r2" >Sur le serveur ou est stocké le code <br>
+        <input type="radio" id="r3" >Tantôt dans le navigateur, tantôt sur le serveur <br>
+      </form>
+
+    <div class="rep" id="reponse1">
+      Le code Jquery n'est autre que du javascript. A ce titre, il s'exécute toujours sur les clients (ordinateur,tablette et téléphone) qui font référence à ce code via une page HTML. bonne réponse : 1
+    </div>
+  </div>
+
+  <div class="question">
+    <h1>Question 2</h1>
+    <div class="qcm2">
+     <p> Lorsque l'on veut exécuter du code Jquery, attendre la disponibilité du DOM est :</p> <img id="img2" src="img/question.png" />
+      <form>
+        <input type="radio" id="r4" >Vital <br>
+        <input type="radio" id="r5" >inutile <br>
+        <input type="radio" id="r6" >les 2 <br>
+      </form>
+
+    </div>
+    <div class="rep" id="reponse2">
+      il est impératif d'attendre la disponibilité du DOM avant d'éxecuter du code JQUEry, sans quoi , ce code pourrait d'appliquer à un élément indisponible et provoquer un comportement inattendu, voire même un plantage du navigateur
+    </div>
+  </div>
+
+  <div class="question">
+    <h1>Question 3</h1>
+    <div class="qcm3">
+     <p> Pour chainer deux méthode JQuery :</p> <img id="img3" src="img/question.png" />
+      <form>
+        <input type="radio" id="r7" >il faut les mettre l'une à la suite de l'autre en les séparant par une virgule <br>
+        <input type="radio" id="r8" >il faut les mettre l'une à la suite de l'autre en les séparant par un point decimal <br>
+        <input type="radio" id="r9" >Impossiblre de chainer 2 méthode JQuery <br>
+      </form>
+
+    </div>
+    <div class="rep" id="reponse3">
+      L'exécution d'un sélecteur jQuery produit un objet jQuery sur lequel il est possible d'appliquer une méthode jQuery. Cette méthode produit elle-même un objet jQuery. Il est donc possible de lui appliquer une autre méthode en utilisant le caractère de liaison habituel : le point décimal.
+    </div>
+  </div>
+
+  <script>
+
+    $('a').hover(
+  function() {
+    $('.rep').show();
+    if ($(':radio[id="r1"]:checked').val()) {
+      $('#img1').attr('src', 'img/bon.png');
+      $('#reponse1').css('color', 'green');
+    }
+    else {
+      $('#img1').attr('src', 'img/mauvais.png');
+      $('#reponse1').css('color', 'red');
+    }
+    if ($(':radio[id="r4"]:checked').val()) {
+      $('#img2').attr('src', 'img/bon.png');
+      $('#reponse2').css('color', 'green');
+    }
+    else {
+      $('#img2').attr('src', 'img/mauvais.png');
+      $('#reponse2').css('color', 'red');
+    }
+    if ($(':radio[id="r8"]:checked').val()) {
+      $('#img3').attr('src', 'img/bon.png');
+      $('#reponse3').css('color', 'green');
+    }
+    else {
+      $('#img3').attr('src', 'img/mauvais.png');
+      $('#reponse3').css('color', 'red');
+    }
+  },
+  function() {
+    $('.rep').hide();
+    $('#img1').attr('src', 'img/question.png');
+    $('#img2').attr('src', 'img/question.png');
+    $('#img3').attr('src', 'img/question.png');
+  }
+);
+
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>
